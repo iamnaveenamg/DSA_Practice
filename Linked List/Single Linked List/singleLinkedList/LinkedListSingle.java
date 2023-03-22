@@ -1,8 +1,7 @@
-
 class LinkedListSingle {
-
     Node head;
     Node tail;
+
     int size = 0;
 
     LinkedListSingle() {
