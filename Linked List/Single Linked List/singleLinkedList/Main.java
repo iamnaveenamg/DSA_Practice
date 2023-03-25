@@ -11,5 +11,7 @@ class Main {
         ll.insert(1, 1);
         ll.insert(111, 0);
         ll.display();
+        System.out.println(ll.delete(2));
+        ll.display();
     }
 }
