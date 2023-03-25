@@ -33,11 +33,9 @@ public class MyQueue {
             System.out.println("Queue is full");
         } else {
             if (front == -1) {
-                // mark front denote first element of queue
                 front = 0;
             }
             rear++;
-            // insert element at the rear
             items[rear] = element;
             System.out.println("Insert " + element);
         }
@@ -46,20 +44,15 @@ public class MyQueue {
     // delete element from the queue
     int deQueue() {
         int element;
-        // if queue is empty
         if (isEmpty()) {
             System.out.println("Queue is empty");
             return (-1);
         } else {
-            // remove element from the front of queue
             element = items[front];
-
-            // if the queue has only one element
             if (front >= rear) {
                 front = -1;
                 rear = -1;
             } else {
-                // mark next element as the front
                 front++;
             }
             System.out.println(element + " Deleted");
