@@ -28,7 +28,6 @@ public class MyQueue {
 
     // insert elements to the queue
     void enQueue(int element) {
-
         // if queue is full
         if (isFull()) {
             System.out.println("Queue is full");
@@ -37,7 +36,6 @@ public class MyQueue {
                 // mark front denote first element of queue
                 front = 0;
             }
-
             rear++;
             // insert element at the rear
             items[rear] = element;
@@ -48,7 +46,6 @@ public class MyQueue {
     // delete element from the queue
     int deQueue() {
         int element;
-
         // if queue is empty
         if (isEmpty()) {
             System.out.println("Queue is empty");
@@ -76,27 +73,18 @@ public class MyQueue {
         if (isEmpty()) {
             System.out.println("Empty Queue");
         } else {
-            // display the front of the queue
             System.out.println("\nFront index-> " + front);
-
-            // display element of the queue
             System.out.println("Items -> ");
             for (i = front; i <= rear; i++)
                 System.out.print(items[i] + "  ");
-
-            // display the rear of the queue
             System.out.println("\nRear index-> " + rear);
         }
     }
+
     public static void main(String[] args) {
         // create an object of Queue class
         MyQueue q = new MyQueue();
-
-        // try to delete element from the queue
-        // currently queue is empty
-        // so deletion is not possible
         q.deQueue();
-
         // insert elements to the queue
         for (int i = 1; i < 6; i++) {
             q.enQueue(i);
