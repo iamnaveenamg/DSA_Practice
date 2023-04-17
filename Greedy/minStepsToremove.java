@@ -2,7 +2,7 @@ package Greedy;
 
 class minStepsToremove {
     public static void main(String args[]) {
-        System.out.println(minSteps1("abababa"));
+        System.out.println(minSteps1("ababab"));
 
     }
 
