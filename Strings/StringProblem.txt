@@ -1,0 +1,40 @@
+class StringProblem{
+    public static void main(String[] args) {
+        String a[]={"one", "two", "three", "four", "five","six", "seven", "eight", "nine"};
+        String s="onetwothreefourfivesix";
+        Display(s);
+
+    }
+    static void Display(String s){
+        String s1="";
+        int sum=0;
+        for(int i=0;i<s.length();i++){
+            
+            if(StringAns1(s1)==true){
+                sum+=StringAns(s1);
+                s1="";
+            }else{
+                s1+=s.charAt(i);
+            }
+        }
+        System.out.println(sum);
+    }
+    static int StringAns(String s){
+        String a[]={"one", "two", "three", "four", "five","six", "seven", "eight", "nine"};
+        for(int i=0;i<a.length;i++){
+            if(a[i].equals(s)){
+                return i+1;
+            }
+        }
+        return 0;
+    }
+    static boolean StringAns1(String s){
+        String a[]={"one", "two", "three", "four", "five","six", "seven", "eight", "nine"};
+        for(int i=0;i<a.length;i++){
+            if(a[i].equals(s)){
+                return true;
+            }
+        }
+        return false;
+    }
+}
